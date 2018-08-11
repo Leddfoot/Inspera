@@ -3,4 +3,11 @@ body {
 
 article {
   background: #fff;
-  padding: 15px; }
+  padding: 15px;
+  max-width: 600px; }
+
+@media (max-width: 720px) {
+  .bootstrap-override1 {
+    font-size: 26px; }
+  .bootstrap-override2 {
+    font-size: 20px; } }

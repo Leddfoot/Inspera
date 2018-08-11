@@ -1,8 +1,21 @@
+@import "./variables";
+
+
 body {
-    background: #eee;
+    background:$body-background-default;
 }
 
 article {
-    background: #fff;
+    background: $article-background-default;
     padding: 15px;
+    max-width: 600px;
+}
+
+@media(max-width: $breakpoint-small-screen) {
+  .bootstrap-override1 {
+    font-size: $small-screen-h1;
+  }
+  .bootstrap-override2 {
+    font-size: $small-screen-h2;
+  }
 }
