@@ -22,20 +22,40 @@ module.exports = React.createClass({
     propTypes: {
         navBar: React.PropTypes.array // The JSON array returned from js/model/NavModel.getNavBarItems passed on from main
     },
+    getInitialState: function() {
+      return {navCollapsed: false};
+    },
+    toggleNavbar: function() {
+      this.setState({navCollapsed: !this.state.navCollapsed});
+  },
     render: function() {
-        var items = [],
-            navBar = this.props.navBar;
-        for (var i = 0; i < navBar.length; i++) {
-            items.push(<NavItem item={navBar[i]} key={i}/>);
-        }
-
+      const items = this.props.navBar.map((navItem) => <NavItem item={navItem} key={navItem.title}/>);
+      const {navCollapsed} = this.state;
+  
         return (
-            <nav>
-                <img src="https://ias.inspera.no/file/cil/mp_logo/file"/>
-                <ul>
+          <div>
+
+            <nav className="navbar navbar-default">
+              <div className="container-fluid">
+                <div className="navbar-header">
+                  <button type="button" className="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false" onClick={this.toggleNavbar}>
+                    <span className="sr-only">Toggle navigation</span>
+                    <span className="icon-bar"></span>
+                    <span className="icon-bar"></span>
+                    <span className="icon-bar"></span>
+                  </button>
+
+                  <a className="navbar-brand" href="#"><img src="https://ias.inspera.no/file/cil/mp_logo/file"/></a>
+                </div>
+                {/* <div className="collapse navbar-collapse"> */}
+                <div className={(navCollapsed ? 'collapse' : '') + ' navbar-collapse'}>
+                  <ul className="nav navbar-nav">
                     {items}
-                </ul>
+                  </ul>
+                </div>
+              </div>
             </nav>
+          </div>
         );
     }
 });
