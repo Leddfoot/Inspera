@@ -19,9 +19,10 @@ var navBarJSON = [
     }
 ];
 
-var sortedNavBarJSON = _.sortBy( navBarJSON, 'title');
+
 
 var getNavBarItems = function () {
+  var sortedNavBarJSON = _.sortBy( navBarJSON, 'title');
     return sortedNavBarJSON;
 };
 

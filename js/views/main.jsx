@@ -9,13 +9,13 @@ module.exports = React.createClass({
     render: function() {
         return (
             <html>
-                <head>
-                    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"/>
-                    <link rel="stylesheet" href="/base.css"/>
-                </head>
-                <body>
-                    <NavBar navBar={this.props.navBar}/>
-                    <MainContent />
+              <head>
+                <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"/>
+                <link rel="stylesheet" href="/base.css"/>
+              </head>
+              <body>
+                <NavBar navBar={this.props.navBar}/>
+                <MainContent />
                 </body>
             </html>
         );

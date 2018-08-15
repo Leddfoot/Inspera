@@ -20,6 +20,7 @@
   "dependencies": {
     "2": "^1.0.2",
     "express": "^4.13.3",
+    "jest": "^23.5.0",
     "python": "0.0.4",
     "react": "^0.13.3",
     "underscore": "^1.8.3"

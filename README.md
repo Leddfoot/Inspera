@@ -26,6 +26,9 @@ When developing CSS we at Inspera use either LESS or SASS (SCSS). Like JSX, the 
 ### Node server
 You should not need to do any important changes to the server setup.
 
+### Testing
+Testing is not automatically watched via Gulp! In order to run testing you must use the command: npm test. There is a "test" script that is set up to watch automatically. If you prefer to test manually, remove the watch flag in the test script in package.JSON from "test": "jest --watch" to "test": "jest".
+
 #Inspera Frontend Assignments
 
 ## CSS
